@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Reverse_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reverse Words" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LND-Og-bjn">
+                                <rect key="frame" x="16" y="165" width="382" height="40"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Text to reverse" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cdu-X0-hlw">
+                                <rect key="frame" x="16" y="301" width="382" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="vzE-4M-PWV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go"/>
+                                <connections>
+                                    <action selector="textFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="JqN-HB-iEN"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6i-c3-Cbe">
+                                <rect key="frame" x="13" y="736" width="388" height="60"/>
+                                <color key="backgroundColor" systemColor="tintColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Juh-QK-3Q2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Reverse">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="reversePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VlC-OF-XaS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This application will return your words. Please type text below" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="95y-bz-hPi">
+                                <rect key="frame" x="34" y="221" width="346" height="40"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hmP-Nr-KRH">
+                                <rect key="frame" x="16" y="386" width="382" height="35"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LFA-Fd-1uP">
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="35"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RIH-7D-jsp">
+                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="35"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="22"/>
+                                                <color key="textColor" systemColor="tintColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="RIH-7D-jsp" secondAttribute="trailing" id="6mS-NK-Eyk"/>
+                                            <constraint firstItem="RIH-7D-jsp" firstAttribute="top" secondItem="LFA-Fd-1uP" secondAttribute="top" id="CCP-dV-cal"/>
+                                            <constraint firstAttribute="bottom" secondItem="RIH-7D-jsp" secondAttribute="bottom" id="Gwt-zN-Wzu"/>
+                                            <constraint firstItem="RIH-7D-jsp" firstAttribute="leading" secondItem="LFA-Fd-1uP" secondAttribute="leading" id="Jmd-bD-hPQ"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="LFA-Fd-1uP" firstAttribute="height" secondItem="hmP-Nr-KRH" secondAttribute="height" id="LpI-aL-Uks"/>
+                                    <constraint firstAttribute="trailing" secondItem="LFA-Fd-1uP" secondAttribute="trailing" constant="332" id="Mp4-JY-fpL"/>
+                                    <constraint firstAttribute="bottom" secondItem="LFA-Fd-1uP" secondAttribute="bottom" id="XRz-dt-SIQ"/>
+                                    <constraint firstAttribute="height" constant="35" id="gFq-I7-mg0"/>
+                                    <constraint firstItem="LFA-Fd-1uP" firstAttribute="leading" secondItem="hmP-Nr-KRH" secondAttribute="leading" id="jC9-4B-gLs"/>
+                                    <constraint firstItem="LFA-Fd-1uP" firstAttribute="width" secondItem="hmP-Nr-KRH" secondAttribute="width" multiplier="0.13089" priority="250" id="xbP-iY-nVF"/>
+                                    <constraint firstItem="LFA-Fd-1uP" firstAttribute="top" secondItem="mzR-qh-s9m" secondAttribute="top" id="yut-DG-zan"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="VDB-XS-3iK"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="mzR-qh-s9m"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="95y-bz-hPi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="0UW-JY-6ew"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hmP-Nr-KRH" secondAttribute="trailing" constant="16" id="0iG-Jy-SEi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="R6i-c3-Cbe" secondAttribute="trailing" constant="13" id="2HC-pi-1So"/>
+                            <constraint firstItem="hmP-Nr-KRH" firstAttribute="top" secondItem="Cdu-X0-hlw" secondAttribute="bottom" constant="25" id="2Mi-h4-yTZ"/>
+                            <constraint firstItem="hmP-Nr-KRH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="9lx-nm-Wif"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Cdu-X0-hlw" secondAttribute="trailing" constant="16" id="B7c-oN-fO6"/>
+                            <constraint firstItem="R6i-c3-Cbe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="13" id="ENb-7J-Q7e"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LND-Og-bjn" secondAttribute="trailing" constant="16" id="HWE-CV-JYn"/>
+                            <constraint firstItem="Cdu-X0-hlw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="PEi-kN-gA5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="R6i-c3-Cbe" secondAttribute="bottom" constant="66" id="PaT-nD-yQX"/>
+                            <constraint firstItem="LND-Og-bjn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="121" id="Puo-6l-X20"/>
+                            <constraint firstAttribute="trailing" secondItem="95y-bz-hPi" secondAttribute="trailing" constant="34" id="SN5-eB-RBR"/>
+                            <constraint firstItem="LND-Og-bjn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Wga-GL-j7q"/>
+                            <constraint firstItem="95y-bz-hPi" firstAttribute="top" secondItem="LND-Og-bjn" secondAttribute="bottom" constant="16" id="rYT-Lw-wEU"/>
+                            <constraint firstItem="Cdu-X0-hlw" firstAttribute="top" secondItem="95y-bz-hPi" secondAttribute="bottom" constant="40" id="rr1-ZB-I34"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="inputTextField" destination="Cdu-X0-hlw" id="SjS-M4-15D"/>
+                        <outlet property="reverseButton" destination="R6i-c3-Cbe" id="uSo-iP-Kfg"/>
+                        <outlet property="reversedTextLabel" destination="RIH-7D-jsp" id="IVN-Gd-0lh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
